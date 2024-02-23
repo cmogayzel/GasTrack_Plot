@@ -12,7 +12,7 @@ fuel_subset = gasprice[["Price","Gallons","GasTotal"]]
 colors = []
 
 for lab, rows in fuel_subset.iterrows():
-    if rows['GasTotal'] >= 50:
+    if rows['Gallons'] >= 10:
         colors.append('red')
     else:
         colors.append('green')
@@ -22,10 +22,10 @@ colors[:10]
 
 fig = plt.figure(figsize=(12,8))
 
-plt.scatter(fuel_subset.Price,fuel_subset.GasTotal,c=colors)
+plt.scatter(fuel_subset.Price,fuel_subset.Gallons,c=colors)
 
 plt.title("Fuel Cost Tracking")
-plt.xlabel("Gas Price")
-plt.ylabel("Gas Total")
+plt.xlabel("Fuel Price in Dollars")
+plt.ylabel("Gallons")
 
 plt.show()
