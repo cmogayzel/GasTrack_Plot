@@ -8,6 +8,7 @@ gasprice = pd.read_csv('FuelTracker_Report.csv', index_col=0)
 #Data Subset
 fuel_subset = gasprice[["Price","Gallons","GasTotal"]]
 
+
 #Color scheme list. Red total over $50 and Green = Under $50
 colors = []
 
